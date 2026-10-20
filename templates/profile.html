@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block wide %} wide{% endblock %}
+{% block title %}Profile - {{ username }}{% endblock %}
+{% block content %}
+<nav class="nav">
+  <span class="who"><span class="avatar">{{ username[0]|upper }}</span>{{ username }}</span>
+  <a href="/profile" class="active">Profile</a>
+  <a href="/dashboard">Dashboard</a>
+  <a href="/logout" class="logout">Logout</a>
+</nav>
+
+<div class="card">
+  <h1>My Profile</h1>
+  <p class="subtitle">Your employee profile information.</p>
+
+  <div class="info-grid">
+    <div class="info-item">
+      <div class="label">Username</div>
+      <div class="value">{{ username }}</div>
+    </div>
+    <div class="info-item">
+      <div class="label">Role</div>
+      <div class="value">Employee</div>
+    </div>
+    <div class="info-item">
+      <div class="label">Department</div>
+      <div class="value">General</div>
+    </div>
+    <div class="info-item">
+      <div class="label">Status</div>
+      <div class="value ok">● Active</div>
+    </div>
+  </div>
+</div>
+{% endblock %}

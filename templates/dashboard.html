@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block wide %} wide{% endblock %}
+{% block title %}Dashboard - {{ username }}{% endblock %}
+{% block content %}
+<nav class="nav">
+  <span class="who"><span class="avatar">{{ username[0]|upper }}</span>{{ username }}</span>
+  <a href="/profile">Profile</a>
+  <a href="/dashboard" class="active">Dashboard</a>
+  <a href="/logout" class="logout">Logout</a>
+</nav>
+
+<div class="card">
+  <h1>Employee Dashboard</h1>
+  <p class="subtitle">Welcome back, {{ username }}.</p>
+
+  <div class="info-grid">
+    <div class="info-item">
+      <div class="label">Projects Assigned</div>
+      <div class="value">3</div>
+    </div>
+    <div class="info-item">
+      <div class="label">Tasks Due</div>
+      <div class="value">5</div>
+    </div>
+    <div class="info-item">
+      <div class="label">Team Members</div>
+      <div class="value">8</div>
+    </div>
+    <div class="info-item">
+      <div class="label">Time Off</div>
+      <div class="value">12 days</div>
+    </div>
+  </div>
+
+  <h2 style="margin:22px 0 10px;">Quick Actions</h2>
+  <div class="action-row">
+    <a href="/profile"><span>👤 View / edit my profile</span><span class="arrow">→</span></a>
+    <a href="/dashboard"><span>⏳ Refresh dashboard</span><span class="arrow">→</span></a>
+  </div>
+</div>
+{% endblock %}

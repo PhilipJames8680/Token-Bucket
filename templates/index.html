@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block title %}Employee Login Portal{% endblock %}
+{% block wide %} wide{% endblock %}
+{% block content %}
+<div class="card" style="text-align:center; padding:40px 32px;">
+  <div class="logo" style="width:56px;height:56px;border-radius:16px;margin:0 auto 16px;
+       background:linear-gradient(135deg,#6366f1,#8b5cf6);display:flex;align-items:center;
+       justify-content:center;font-size:26px;box-shadow:0 12px 28px -8px rgba(99,102,241,.7);">🔒</div>
+  <h1>Employee Login Portal</h1>
+  <p class="subtitle" style="margin-bottom:20px;">Sign up or log in to access your employee dashboard.</p>
+
+  <div class="action-row" style="text-align:left;">
+    <a href="/signup">
+      <span style="display:flex;align-items:center;gap:12px;">
+        <span style="font-size:18px;">✨</span> Create an account
+      </span>
+      <span class="arrow">→</span>
+    </a>
+    <a href="/login">
+      <span style="display:flex;align-items:center;gap:12px;">
+        <span style="font-size:18px;">🔑</span> I already have an account
+      </span>
+      <span class="arrow">→</span>
+    </a>
+  </div>
+</div>
+{% endblock %}
