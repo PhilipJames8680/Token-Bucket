@@ -1,0 +1,9 @@
+# Install:  pip install -r requirements.txt
+
+fastapi==0.150.0
+starlette==1.9.0            # imported directly: BaseHTTPMiddleware, Jinja2Templates
+uvicorn==0.54.0             # ASGI server: uvicorn main:app
+jinja2==3.1.6               # template engine for templates/
+itsdangerous==2.2.0         # signed session cookies (auth.py)
+python-multipart==0.0.32    # required by FastAPI for Form(...) parsing
+
